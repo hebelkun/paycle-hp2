@@ -993,6 +993,10 @@ section[id] { scroll-margin-top: 100px; }
    Cards start bunched toward the centre, slightly offset and overlapping,
    then slide out to their grid positions when the section scrolls in. */
 .cards-deal { opacity: 1; transform: none; }            /* neutralise the generic reveal fade */
+/* Clip the off-grid start positions so they don't extend the document and
+   cause a scroll jump on first reveal. `clip` (not hidden) avoids creating a
+   scroll container, so sticky nav and scroll anchoring stay intact. */
+.cards-deal { overflow-x: clip; }
 .cards-deal .feature-card {
   transition: transform 0.85s var(--ease), box-shadow 0.25s var(--ease);
   will-change: transform;
