@@ -40,6 +40,7 @@
   }
 
   /* ---- Card video: play on hover / focus, pause + reset on leave ---- */
+  var mobileCards = window.matchMedia("(max-width: 980px), (pointer: coarse)");
   document.querySelectorAll(".feature-card .card-video").forEach(function (video) {
     var card = video.closest(".feature-card");
     if (!card) return;
@@ -58,6 +59,32 @@
     card.addEventListener("focus", play);
     card.addEventListener("blur", stop);
   });
+
+  /* ---- Service videos: play when scrolled into view on mobile ---- */
+  var serviceVideos = document.querySelectorAll(".cards-deal .card-video");
+  if (serviceVideos.length && "IntersectionObserver" in window && mobileCards.matches) {
+    var videoObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          var video = entry.target.querySelector(".card-video");
+          if (!video) return;
+
+          if (entry.isIntersecting) {
+            var p = video.play();
+            if (p && p.catch) { p.catch(function () {}); }
+          } else {
+            video.pause();
+            try { video.currentTime = 0; } catch (e) {}
+          }
+        });
+      },
+      { threshold: 0.45, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    document.querySelectorAll(".cards-deal .feature-card").forEach(function (card) {
+      videoObserver.observe(card);
+    });
+  }
 
   /* ---- Contact form (front-end demo) ---- */
   var form = document.querySelector("#contact-form");
