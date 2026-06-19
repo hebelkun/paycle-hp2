@@ -579,6 +579,7 @@ section[id] { scroll-margin-top: 100px; }
 .split.reverse .split-media { order: 2; }
 @media (max-width: 860px) {
   .split { grid-template-columns: 1fr; }
+  .split.reverse { grid-template-columns: 1fr; }
   .split.reverse .split-media { order: 0; }
 }
 .split-media img {
