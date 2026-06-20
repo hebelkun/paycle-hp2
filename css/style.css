@@ -182,6 +182,21 @@ section[id] { scroll-margin-top: 100px; }
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-soft);
 }
+.joint-research-details { align-items: stretch; }
+.research-theme-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.research-theme-card .card-num { margin-bottom: 10px; }
+.research-theme-card .h3 { margin-bottom: 14px; }
+.research-theme-note {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
 @media (max-width: 860px) {
   .joint-research-head {
     grid-template-columns: 1fr;
@@ -191,7 +206,6 @@ section[id] { scroll-margin-top: 100px; }
     margin-inline: auto;
   }
 }
-
 .upcx-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
@@ -500,7 +514,7 @@ section[id] { scroll-margin-top: 100px; }
   padding: var(--s-xxl);
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--glow), var(--shadow-soft); }
+a.card:hover { transform: translateY(-4px); box-shadow: var(--glow), var(--shadow-soft); }
 
 .card-num {
   display: inline-flex;
@@ -524,7 +538,7 @@ section[id] { scroll-margin-top: 100px; }
   display: flex;
   flex-direction: column;
 }
-.feature-card:hover { transform: translateY(-4px); box-shadow: var(--glow), var(--shadow-soft); }
+a.feature-card:hover { transform: translateY(-4px); box-shadow: var(--glow), var(--shadow-soft); }
 .feature-card .thumb {
   aspect-ratio: 16 / 10;
   background: var(--lavender);
@@ -534,7 +548,7 @@ section[id] { scroll-margin-top: 100px; }
 .feature-card .body { padding: var(--s-xl); }
 .feature-card .card-num { margin-bottom: 8px; }
 .feature-card h3 { margin-bottom: 8px; transition: color 0.2s var(--ease); }
-.feature-card:hover h3 { color: var(--primary); }
+a.feature-card:hover h3 { color: var(--primary); }
 .feature-card p { color: var(--muted); font-size: 0.94rem; }
 
 /* ---- Overlay card: the image IS the card, text sits on top ---- */
@@ -566,7 +580,7 @@ section[id] { scroll-margin-top: 100px; }
   letter-spacing: -0.01em;
 }
 .feature-card.overlay .card-num { color: var(--primary); }
-.feature-card.overlay:hover h3 { color: var(--primary); }
+a.feature-card.overlay:hover h3 { color: var(--primary); }
 
 /* ---------- About split ---------- */
 .split {
@@ -607,15 +621,8 @@ section[id] { scroll-margin-top: 100px; }
 }
 .split-body .eyebrow { margin-bottom: 18px; }
 .split-body .h2 { margin-bottom: 18px; }
-.split-body > p,
-.usap-summary > p { color: var(--muted); margin-bottom: 22px; }
-
-@media (max-width: 860px) {
-  .usap-split .split-body { display: contents; }
-  .usap-split .usap-summary { order: 0; }
-  .split.reverse.usap-split .split-media { order: 1; }
-  .usap-split .point-list { order: 2; }
-}
+.split-body > p { color: var(--muted); margin-bottom: 22px; }
+.usap-intro { margin-bottom: clamp(36px, 5vw, 56px); }
 
 /* ---------- Feature list inside service blocks ---------- */
 .point-list { display: grid; gap: 18px; margin-bottom: 26px; }
@@ -695,6 +702,16 @@ section[id] { scroll-margin-top: 100px; }
 }
 .partnership-grid .cell--fantasista img {
   max-height: 74px;
+}
+.partnership-grid .cell--yab img {
+  max-width: 90%;
+  max-height: 56px;
+}
+.partnership-grid .cell--saver {
+  padding-inline: 10px;
+}
+.partnership-grid .cell--saver img {
+  max-height: 70px;
 }
 
 /* ============================================================
@@ -810,7 +827,7 @@ section[id] { scroll-margin-top: 100px; }
   padding: var(--s-xl);
   transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
-.member:hover { transform: translateY(-3px); box-shadow: var(--glow); }
+a.member:hover { transform: translateY(-3px); box-shadow: var(--glow); }
 .member .avatar {
   width: 144px; height: 144px;
   border-radius: var(--r-full);
@@ -857,6 +874,19 @@ section[id] { scroll-margin-top: 100px; }
   transform: scale(1.35);
 }
 @media (max-width: 620px) { .gallery, .gallery--4 { grid-template-columns: repeat(2, 1fr); } }
+
+.event-item img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--r-md);
+}
+.event-item figcaption {
+  margin-top: 12px;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 600;
+}
 
 .patent-fan {
   position: relative;
