@@ -613,7 +613,7 @@ section[id] { scroll-margin-top: 100px; }
 @media (max-width: 860px) {
   .usap-split .split-body { display: contents; }
   .usap-split .usap-summary { order: 0; }
-  .usap-split .split-media { order: 1; }
+  .split.reverse.usap-split .split-media { order: 1; }
   .usap-split .point-list { order: 2; }
 }
 
