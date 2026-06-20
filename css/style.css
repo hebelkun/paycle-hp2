@@ -607,7 +607,15 @@ section[id] { scroll-margin-top: 100px; }
 }
 .split-body .eyebrow { margin-bottom: 18px; }
 .split-body .h2 { margin-bottom: 18px; }
-.split-body > p { color: var(--muted); margin-bottom: 22px; }
+.split-body > p,
+.usap-summary > p { color: var(--muted); margin-bottom: 22px; }
+
+@media (max-width: 860px) {
+  .usap-split .split-body { display: contents; }
+  .usap-split .usap-summary { order: 0; }
+  .usap-split .split-media { order: 1; }
+  .usap-split .point-list { order: 2; }
+}
 
 /* ---------- Feature list inside service blocks ---------- */
 .point-list { display: grid; gap: 18px; margin-bottom: 26px; }
@@ -1017,12 +1025,12 @@ section[id] { scroll-margin-top: 100px; }
   .cards-deal .feature-card { transform: none; transition-delay: 0s; }
 }
 
-/* Hover: nudge the card up and to the right (after the deal has settled) */
+/* Hover: nudge the card straight up (after the deal has settled) */
 .cards-deal.in .feature-card.overlay {
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 .cards-deal.in .feature-card.overlay:hover {
-  transform: translate(9px, -11px);
+  transform: translateY(-11px);
   box-shadow: var(--shadow-soft);
 }
 
