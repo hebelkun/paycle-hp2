@@ -462,6 +462,7 @@ section[id] { scroll-margin-top: 100px; }
 .hero-lead {
   max-width: 600px;
   font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 350; /* h1として使うため、pと同じ見た目を維持 */
   line-height: 1.7;
   color: var(--muted-on-dark);
   margin-bottom: 36px;
