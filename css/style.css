@@ -612,6 +612,9 @@ a.feature-card.overlay:hover h3 { color: var(--primary); }
 }
 .split-media--message img {
   max-width: 70%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 22%;
 }
 .split-media--plain img {
   max-width: 280px;
