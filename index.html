@@ -6,14 +6,20 @@
   <title>PAYCLE｜ブロックチェーン・AI・耐量子暗号の研究開発と社会実装</title>
   <meta name="description" content="ペイクルは、ブロックチェーン・AI・耐量子暗号の研究開発から実装までを一貫して手がける福岡発のテクノロジーカンパニーです。" />
   <link rel="canonical" href="https://paycle.com/" />
+  <link rel="alternate" hreflang="ja" href="https://paycle.com/" />
+  <link rel="alternate" hreflang="en" href="https://paycle.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://paycle.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PAYCLE｜株式会社ペイクル" />
   <meta property="og:title" content="PAYCLE｜ブロックチェーン・AI・耐量子暗号の研究開発と社会実装" />
   <meta property="og:description" content="ペイクルは、ブロックチェーン・AI・耐量子暗号の研究開発から実装までを一貫して手がける福岡発のテクノロジーカンパニーです。" />
   <meta property="og:url" content="https://paycle.com/" />
-  <meta property="og:image" content="https://paycle.com/images/logo.png" />
+  <meta property="og:image" content="https://paycle.com/images/ogp.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PAYCLE｜ブロックチェーン・AI・耐量子暗号" />
   <meta property="og:locale" content="ja_JP" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,7 +32,7 @@
     "ペイクル"
   ],
   "url": "https://paycle.com/",
-  "logo": "https://paycle.com/images/logo.png",
+  "logo": "https://paycle.com/images/logo.webp",
   "description": "ブロックチェーン・AI・耐量子暗号の研究開発から実装までを一貫して手がける福岡発のテクノロジーカンパニー。",
   "foundingDate": "2018-06-08",
   "founder": {
@@ -79,7 +85,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer support",
-    "url": "https://paycle.com/contact.html",
+    "url": "https://paycle.com/contact/",
     "availableLanguage": "ja"
   }
 }
@@ -100,39 +106,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
+
+  <a class="skip-link" href="#main">本文へ移動</a>
 
   <!-- ===== Navigation ===== -->
   <div class="nav-wrap">
     <nav class="nav" aria-label="グローバルナビゲーション">
-      <a href="index.html" class="nav-logo" aria-label="PAYCLE ホーム">
-        <img src="images/logo.png" alt="PAYCLE" />
+      <a href="/" class="nav-logo" aria-label="PAYCLE ホーム">
+        <img src="/images/logo.webp" alt="PAYCLE" width="800" height="204" />
       </a>
       <ul class="nav-links">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="rd.html">R&amp;D</a></li>
-        <li><a href="cases.html">Cases</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/rd/">R&amp;D</a></li>
+        <li><a href="/cases/">Cases</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/about/">About</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="/en/" class="lang-switch" hreflang="en" lang="en">English</a>
+        <a href="/contact/" class="btn btn-primary">Contact</a>
         <button class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
       </div>
       <div class="nav-menu" id="nav-menu">
-        <a href="services.html">Services</a>
-        <a href="rd.html">R&amp;D</a>
-        <a href="cases.html">Cases</a>
-        <a href="news.html">News</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="/services/">Services</a>
+        <a href="/rd/">R&amp;D</a>
+        <a href="/cases/">Cases</a>
+        <a href="/news/">News</a>
+        <a href="/about/">About</a>
+        <a href="/en/" class="lang-switch" hreflang="en" lang="en">English</a>
+        <a href="/contact/" class="btn btn-primary">Contact</a>
       </div>
     </nav>
   </div>
+
+  <main id="main" tabindex="-1">
 
   <!-- ===== Hero ===== -->
   <header class="hero">
@@ -162,7 +177,7 @@
         ブロックチェーン・AI・耐量子暗号の研究開発から、システムの設計・開発まで支援するテクノロジー企業。
       </h1>
       <div class="hero-actions">
-        <a href="services.html" class="btn btn-light btn-arrow">事業内容を見る</a>
+        <a href="/services/" class="btn btn-light btn-arrow">事業内容を見る</a>
       </div>
     </div>
   </header>
@@ -172,7 +187,7 @@
     <div class="container">
       <div class="split reveal">
         <div class="split-media">
-          <img src="images/about_philosophy.png" alt="PAYCLEオフィス" />
+          <img loading="lazy" decoding="async" src="/images/about_philosophy.webp" alt="PAYCLEオフィス" width="1254" height="1254" />
         </div>
         <div class="split-body">
           <span class="eyebrow">About</span>
@@ -181,7 +196,7 @@
             ペイクルは、福岡を拠点に、ブロックチェーンやAIを活用したシステムを開発するテクノロジー企業です。
             大学や企業との研究開発にも取り組み、そこで得た技術を実際の事業で使える仕組みへとつなげています。
           </p>
-          <a href="about.html" class="link-arrow">会社情報を見る</a>
+          <a href="/about/" class="link-arrow">会社情報を見る</a>
         </div>
       </div>
     </div>
@@ -196,40 +211,40 @@
         <p class="lead">研究開発で培った技術を、事業で使える仕組みに。</p>
       </div>
       <div class="grid grid-4 reveal cards-deal">
-        <a class="feature-card overlay" href="services.html#blockchain">
+        <a class="feature-card overlay" href="/services/#blockchain">
           <div class="thumb">
-            <video class="card-video" src="images/index_blockchain.mp4" poster="images/index_blockchain.png"
-                   muted loop playsinline preload="metadata" aria-hidden="true"></video>
+            <video class="card-video" src="/images/index_blockchain.mp4" poster="/images/index_blockchain.webp"
+                   muted loop playsinline preload="none" aria-hidden="true" width="1122" height="1402"></video>
           </div>
           <div class="body">
             <h3 class="h3">Blockchain</h3>
             <p>ブロックチェーン開発・導入支援</p>
           </div>
         </a>
-        <a class="feature-card overlay" href="services.html#ai">
+        <a class="feature-card overlay" href="/services/#ai">
           <div class="thumb">
-            <video class="card-video" src="images/index_ai.mp4" poster="images/index_ai.png"
-                   muted loop playsinline preload="metadata" aria-hidden="true"></video>
+            <video class="card-video" src="/images/index_ai.mp4" poster="/images/index_ai.webp"
+                   muted loop playsinline preload="none" aria-hidden="true" width="1122" height="1402"></video>
           </div>
           <div class="body">
             <h3 class="h3">AI</h3>
             <p>AI開発・AI導入支援</p>
           </div>
         </a>
-        <a class="feature-card overlay" href="services.html#wallet">
+        <a class="feature-card overlay" href="/services/#wallet">
           <div class="thumb">
-            <video class="card-video" src="images/index_wallet.mp4" poster="images/index_wallet.png"
-                   muted loop playsinline preload="metadata" aria-hidden="true"></video>
+            <video class="card-video" src="/images/index_wallet.mp4" poster="/images/index_wallet.webp"
+                   muted loop playsinline preload="none" aria-hidden="true" width="1122" height="1402"></video>
           </div>
           <div class="body">
             <h3 class="h3">Wallet Recovery</h3>
             <p>ウォレット復元支援</p>
           </div>
         </a>
-        <a class="feature-card overlay" href="services.html#development">
+        <a class="feature-card overlay" href="/services/#development">
           <div class="thumb">
-            <video class="card-video" src="images/index_development.mp4" poster="images/index_development.png"
-                   muted loop playsinline preload="metadata" aria-hidden="true"></video>
+            <video class="card-video" src="/images/index_development.mp4" poster="/images/index_development.webp"
+                   muted loop playsinline preload="none" aria-hidden="true" width="1122" height="1402"></video>
           </div>
           <div class="body">
             <h3 class="h3">Development</h3>
@@ -238,7 +253,7 @@
         </a>
       </div>
       <div style="margin-top:36px;" class="reveal">
-        <a href="services.html" class="link-arrow">事業内容を詳しく見る</a>
+        <a href="/services/" class="link-arrow">事業内容を詳しく見る</a>
       </div>
     </div>
   </section>
@@ -248,7 +263,7 @@
     <div class="container">
       <div class="split reverse reveal home-rd">
         <div class="split-media split-media--large">
-          <img src="images/index_rd.png" alt="耐量子暗号とブロックチェーンセキュリティ" />
+          <img loading="lazy" decoding="async" src="/images/index_rd.webp" alt="耐量子暗号とブロックチェーンセキュリティ" width="1672" height="941" />
         </div>
         <div class="split-body">
           <span class="eyebrow">R&amp;D</span>
@@ -256,7 +271,7 @@
           <p style="margin-top:1.5em;">
             耐量子暗号をはじめとする先端技術について、大学や研究機関と共同で研究しています。
           </p>
-          <a href="rd.html" class="link-arrow">研究開発を見る</a>
+          <a href="/rd/" class="link-arrow">研究開発を見る</a>
         </div>
       </div>
     </div>
@@ -274,27 +289,27 @@
       </div>
       <div class="logo-marquee reveal" aria-label="提携企業・研究機関">
         <div class="logo-track">
-          <div class="logo-item"><img src="images/cases_upcx.png" alt="UPCX" /></div>
-          <div class="logo-item"><img src="images/cases_ntt.webp" alt="NTT Digital" /></div>
-          <div class="logo-item"><img src="images/cases_fantasista.png" alt="fantasista" /></div>
-          <div class="logo-item"><img src="images/cases_yab.png" alt="YAMAKOMA ASSET BANK" /></div>
-          <div class="logo-item logo-item--lg"><img src="images/cases_saver.png" alt="ビットコイン・セイヴァー" /></div>
-          <div class="logo-item"><img src="images/cases_nu.jpg" alt="長崎大学" /></div>
-          <div class="logo-item logo-item--lg"><img src="images/cases_jisedai.png" alt="次世代センサ協議会" /></div>
-          <div class="logo-item logo-item--lg"><img src="images/cases_nas.png" alt="長崎総合科学大学" /></div>
+          <div class="logo-item"><img loading="lazy" decoding="async" src="/images/cases_upcx.webp" alt="UPCX" width="2844" height="1364" /></div>
+          <div class="logo-item"><img loading="lazy" decoding="async" src="/images/cases_ntt.webp" alt="NTT Digital" width="596" height="186" /></div>
+          <div class="logo-item"><img loading="lazy" decoding="async" src="/images/cases_fantasista.webp" alt="fantasista" width="300" height="300" /></div>
+          <div class="logo-item"><img loading="lazy" decoding="async" src="/images/cases_yab.webp" alt="YAMAKOMA ASSET BANK" width="648" height="219" /></div>
+          <div class="logo-item logo-item--lg"><img loading="lazy" decoding="async" src="/images/cases_saver.webp" alt="ビットコイン・セイヴァー" width="1885" height="420" /></div>
+          <div class="logo-item"><img loading="lazy" decoding="async" src="/images/cases_nu.webp" alt="長崎大学" width="1829" height="1097" /></div>
+          <div class="logo-item logo-item--lg"><img loading="lazy" decoding="async" src="/images/cases_jisedai.webp" alt="次世代センサ協議会" width="886" height="150" /></div>
+          <div class="logo-item logo-item--lg"><img loading="lazy" decoding="async" src="/images/cases_nas.webp" alt="長崎総合科学大学" width="697" height="100" /></div>
           <!-- ループ用の複製（読み上げ対象外） -->
-          <div class="logo-item" aria-hidden="true"><img src="images/cases_upcx.png" alt="" /></div>
-          <div class="logo-item" aria-hidden="true"><img src="images/cases_ntt.webp" alt="" /></div>
-          <div class="logo-item" aria-hidden="true"><img src="images/cases_fantasista.png" alt="" /></div>
-          <div class="logo-item" aria-hidden="true"><img src="images/cases_yab.png" alt="" /></div>
-          <div class="logo-item logo-item--lg" aria-hidden="true"><img src="images/cases_saver.png" alt="" /></div>
-          <div class="logo-item" aria-hidden="true"><img src="images/cases_nu.jpg" alt="" /></div>
-          <div class="logo-item logo-item--lg" aria-hidden="true"><img src="images/cases_jisedai.png" alt="" /></div>
-          <div class="logo-item logo-item--lg" aria-hidden="true"><img src="images/cases_nas.png" alt="" /></div>
+          <div class="logo-item" aria-hidden="true"><img loading="lazy" decoding="async" src="/images/cases_upcx.webp" alt="" width="2844" height="1364" /></div>
+          <div class="logo-item" aria-hidden="true"><img loading="lazy" decoding="async" src="/images/cases_ntt.webp" alt="" width="596" height="186" /></div>
+          <div class="logo-item" aria-hidden="true"><img loading="lazy" decoding="async" src="/images/cases_fantasista.webp" alt="" width="300" height="300" /></div>
+          <div class="logo-item" aria-hidden="true"><img loading="lazy" decoding="async" src="/images/cases_yab.webp" alt="" width="648" height="219" /></div>
+          <div class="logo-item logo-item--lg" aria-hidden="true"><img loading="lazy" decoding="async" src="/images/cases_saver.webp" alt="" width="1885" height="420" /></div>
+          <div class="logo-item" aria-hidden="true"><img loading="lazy" decoding="async" src="/images/cases_nu.webp" alt="" width="1829" height="1097" /></div>
+          <div class="logo-item logo-item--lg" aria-hidden="true"><img loading="lazy" decoding="async" src="/images/cases_jisedai.webp" alt="" width="886" height="150" /></div>
+          <div class="logo-item logo-item--lg" aria-hidden="true"><img loading="lazy" decoding="async" src="/images/cases_nas.webp" alt="" width="697" height="100" /></div>
         </div>
       </div>
       <div style="margin-top:36px;" class="reveal">
-        <a href="cases.html" class="link-arrow">実績・事例を見る</a>
+        <a href="/cases/" class="link-arrow">実績・事例を見る</a>
       </div>
     </div>
   </section>
@@ -307,20 +322,20 @@
           <span class="eyebrow">News</span>
           <h2 class="h1" style="margin-top:18px;">News &amp; Updates</h2>
         </div>
-        <a href="news.html" class="link-arrow">ニュース一覧を見る</a>
+        <a href="/news/" class="link-arrow">ニュース一覧を見る</a>
       </div>
       <div class="news-list reveal">
-        <a class="news-item" href="news.html">
-          <span class="news-date">2026.07.22</span>
+        <a class="news-item" href="/news/">
+          <span class="news-date">2026.06.25</span>
           <span class="news-title">長崎総合科学大学との共同研究「耐量子暗号」第1回ミーティングを開催</span>
           <span class="chev">→</span>
         </a>
-        <a class="news-item" href="news.html">
+        <a class="news-item" href="/news/">
           <span class="news-date">2026.04.28</span>
           <span class="news-title">ペイクル、長崎総合科学大学を訪問し、次年度研究テーマ「耐量子暗号」について意見交換</span>
           <span class="chev">→</span>
         </a>
-        <a class="news-item" href="news.html">
+        <a class="news-item" href="/news/">
           <span class="news-date">2026.04.20</span>
           <span class="news-title">ビットコイン・セイヴァー株式会社と暗号資産領域における業務提携契約を締結</span>
           <span class="chev">→</span>
@@ -334,43 +349,45 @@
     <h2 class="cta-keyword">CONTACT</h2>
     <p>システム開発、技術相談、協業など、お気軽にお問い合わせください。</p>
     <div class="actions">
-      <a href="contact.html" class="btn btn-primary btn-arrow">お問い合わせ</a>
-      <a href="about.html" class="btn btn-light">会社情報</a>
+      <a href="/contact/" class="btn btn-primary btn-arrow">お問い合わせ</a>
+      <a href="/about/" class="btn btn-light">会社情報</a>
     </div>
   </section>
+  </main>
+
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="PAYCLE" />
+          <img loading="lazy" decoding="async" src="/images/logo.webp" alt="PAYCLE" width="800" height="204" />
           <p>ブロックチェーン・AI・耐量子暗号の研究開発から、システムの設計・開発まで支援するテクノロジー企業。</p>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
-          <a href="services.html">Services</a>
-          <a href="rd.html">R&amp;D</a>
-          <a href="cases.html">Cases</a>
+          <p class="footer-h">Company</p>
+          <a href="/services/">Services</a>
+          <a href="/rd/">R&amp;D</a>
+          <a href="/cases/">Cases</a>
         </div>
         <div class="footer-col">
-          <h4>Information</h4>
-          <a href="news.html">News</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <p class="footer-h">Information</p>
+          <a href="/news/">News</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="privacy-policy.html">Privacy Policy</a>
+          <p class="footer-h">Legal</p>
+          <a href="/privacy-policy/">Privacy Policy</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© PAYCLE Inc.</span>
-        <a href="privacy-policy.html">プライバシーポリシー</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

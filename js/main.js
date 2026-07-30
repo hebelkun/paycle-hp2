@@ -39,6 +39,24 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
+  /* ---- Card video: lazy-load — fetch data only when the card nears the viewport ---- */
+  var lazyVideos = document.querySelectorAll(".card-video[preload='none']");
+  if (lazyVideos.length && "IntersectionObserver" in window) {
+    var preloadObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.preload = "auto";
+            e.target.load();
+            preloadObserver.unobserve(e.target);
+          }
+        });
+      },
+      { rootMargin: "200px 0px" }
+    );
+    lazyVideos.forEach(function (v) { preloadObserver.observe(v); });
+  }
+
   /* ---- Card video: play on hover / focus, pause + reset on leave ---- */
   var mobileCards = window.matchMedia("(max-width: 980px), (pointer: coarse)");
   document.querySelectorAll(".feature-card .card-video").forEach(function (video) {
@@ -83,17 +101,6 @@
 
     document.querySelectorAll(".cards-deal .feature-card").forEach(function (card) {
       videoObserver.observe(card);
-    });
-  }
-
-  /* ---- Contact form (front-end demo) ---- */
-  var form = document.querySelector("#contact-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var done = form.querySelector(".form-done");
-      if (done) { done.hidden = false; }
-      form.reset();
     });
   }
 })();

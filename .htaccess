@@ -1,0 +1,92 @@
+# ============================================================
+# PAYCLE — .htaccess（Apache 用設定案）
+# 保守業者様へ：本ファイルはサイト制作側で用意した設定案です。
+# サーバー環境（Apache バージョン、mod_rewrite / mod_headers の
+# 有効化状況）に合わせて適用可否をご確認ください。
+# nginx 等 Apache 以外の場合は、同等の設定への読み替えをお願いします。
+# ============================================================
+
+# ---------- 文字コード ----------
+AddDefaultCharset UTF-8
+
+# ---------- ディレクトリ一覧の無効化 ----------
+Options -Indexes
+
+# ---------- URL リライト ----------
+# ファイル構成は /services/index.html 方式のため、/services/ などの
+# URLはApache標準のDirectoryIndexで配信されます（リライト不要）。
+# 以下は正規化と旧URLからの301リダイレクトのみです。
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. HTTP → HTTPS への301リダイレクト
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # 2. www あり → www なしへの統一（canonical は https://paycle.com/）
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]
+
+  # 3. /index.html 付きURL → ディレクトリURLへの301リダイレクト
+  #    例: /services/index.html → /services/
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # 4. 旧サイト（WordPress）でページ名が変わったURLの301リダイレクト
+  #    （/contact/ や /news/<記事>/ は新旧同一URLのためリダイレクト不要）
+  RewriteRule ^(overview|about-us)/?$ /about/ [R=301,L]
+  RewriteRule ^(works|partnerships)(/.*)?$ /cases/ [R=301,L]
+  RewriteRule ^(blockchain-development|blockchain-consulting|sportstech|fintech)/?$ /services/ [R=301,L]
+  RewriteRule ^en/(overview|about-us)/?$ /en/about/ [R=301,L]
+  RewriteRule ^en/(works|partnerships)(/.*)?$ /en/cases/ [R=301,L]
+  RewriteRule ^en/(blockchain-development|blockchain-consulting|sportstech|fintech)/?$ /en/services/ [R=301,L]
+  # 旧 /en/news/<記事>/ → 記事は日本語のみのため日本語記事へ
+  RewriteRule ^en/news/(.+)$ /news/$1 [R=301,L]
+
+  # 5. テスト時の「.html」付きURL → ディレクトリURLへの301リダイレクト
+  #    例: /services.html → /services/
+  RewriteCond %{THE_REQUEST} \s/+([^.\s?]+)\.html[\s?] [NC]
+  RewriteRule ^ /%1/ [R=301,L]
+</IfModule>
+
+# ---------- セキュリティヘッダー ----------
+<IfModule mod_headers.c>
+  # MIME スニッフィング防止
+  Header always set X-Content-Type-Options "nosniff"
+
+  # リファラ送信の制限
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # クリックジャッキング防止（他サイトからの iframe 埋め込みを拒否）
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # 不要なブラウザ機能の無効化
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Content-Security-Policy
+  # 本サイトの構成（Google Fonts / Google フォーム送信 / インライン
+  # script・style）に合わせた内容です。適用後に全ページの表示と
+  # お問い合わせフォーム送信の動作確認をお願いします。
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://docs.google.com; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'"
+
+  # HSTS — HTTPS 化が完全に確認できた後に有効化してください。
+  # 有効化すると指定期間 HTTP へ戻せなくなるため、公開直後は
+  # コメントアウトのままにし、安定稼働後の有効化を推奨します。
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# ---------- キャッシュ制御 ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # HTML は短め（更新をすぐ反映）
+  ExpiresByType text/html "access plus 1 hour"
+  # 静的アセットは長め
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType video/mp4 "access plus 6 months"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

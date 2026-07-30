@@ -4,29 +4,53 @@
     <loc>https://paycle.com/</loc>
   </url>
   <url>
-    <loc>https://paycle.com/services.html</loc>
+    <loc>https://paycle.com/services/</loc>
   </url>
   <url>
-    <loc>https://paycle.com/rd.html</loc>
+    <loc>https://paycle.com/rd/</loc>
   </url>
   <url>
-    <loc>https://paycle.com/cases.html</loc>
+    <loc>https://paycle.com/cases/</loc>
   </url>
   <url>
-    <loc>https://paycle.com/news.html</loc>
+    <loc>https://paycle.com/news/</loc>
   </url>
   <url>
-    <loc>https://paycle.com/about.html</loc>
+    <loc>https://paycle.com/about/</loc>
   </url>
   <url>
-    <loc>https://paycle.com/contact.html</loc>
+    <loc>https://paycle.com/contact/</loc>
   </url>
   <url>
-    <loc>https://paycle.com/privacy-policy.html</loc>
+    <loc>https://paycle.com/privacy-policy/</loc>
+  </url>
+  <url>
+    <loc>https://paycle.com/en/</loc>
+  </url>
+  <url>
+    <loc>https://paycle.com/en/services/</loc>
+  </url>
+  <url>
+    <loc>https://paycle.com/en/rd/</loc>
+  </url>
+  <url>
+    <loc>https://paycle.com/en/cases/</loc>
+  </url>
+  <url>
+    <loc>https://paycle.com/en/news/</loc>
+  </url>
+  <url>
+    <loc>https://paycle.com/en/about/</loc>
+  </url>
+  <url>
+    <loc>https://paycle.com/en/contact/</loc>
+  </url>
+  <url>
+    <loc>https://paycle.com/en/privacy-policy/</loc>
   </url>
   <url>
     <loc>https://paycle.com/news/nias-pqc-joint-research-first-meeting/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-06-25</lastmod>
   </url>
   <url>
     <loc>https://paycle.com/news/nias-meeting-about-post-quantum-cryptography/</loc>

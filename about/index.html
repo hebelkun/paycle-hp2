@@ -5,15 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ABOUT 会社情報｜PAYCLE</title>
   <meta name="description" content="企業理念、代表メッセージ、会社概要、メンバー、沿革。株式会社ペイクルの会社情報をご紹介します。" />
-  <link rel="canonical" href="https://paycle.com/about.html" />
+  <link rel="canonical" href="https://paycle.com/about/" />
+  <link rel="alternate" hreflang="ja" href="https://paycle.com/about/" />
+  <link rel="alternate" hreflang="en" href="https://paycle.com/en/about/" />
+  <link rel="alternate" hreflang="x-default" href="https://paycle.com/about/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PAYCLE｜株式会社ペイクル" />
   <meta property="og:title" content="ABOUT 会社情報｜PAYCLE" />
   <meta property="og:description" content="企業理念、代表メッセージ、会社概要、メンバー、沿革。株式会社ペイクルの会社情報をご紹介します。" />
-  <meta property="og:url" content="https://paycle.com/about.html" />
-  <meta property="og:image" content="https://paycle.com/images/logo.png" />
+  <meta property="og:url" content="https://paycle.com/about/" />
+  <meta property="og:image" content="https://paycle.com/images/ogp.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PAYCLE｜ブロックチェーン・AI・耐量子暗号" />
   <meta property="og:locale" content="ja_JP" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,7 +32,7 @@
     "ペイクル"
   ],
   "url": "https://paycle.com/",
-  "logo": "https://paycle.com/images/logo.png",
+  "logo": "https://paycle.com/images/logo.webp",
   "description": "ブロックチェーン・AI・耐量子暗号の研究開発から実装までを一貫して手がける福岡発のテクノロジーカンパニー。",
   "foundingDate": "2018-06-08",
   "founder": {
@@ -79,7 +85,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer support",
-    "url": "https://paycle.com/contact.html",
+    "url": "https://paycle.com/contact/",
     "availableLanguage": "ja"
   }
 }
@@ -106,30 +112,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#main">本文へ移動</a>
+
   <div class="nav-wrap">
     <nav class="nav" aria-label="グローバルナビゲーション">
-      <a href="index.html" class="nav-logo" aria-label="PAYCLE ホーム"><img src="images/logo.png" alt="PAYCLE" /></a>
+      <a href="/" class="nav-logo" aria-label="PAYCLE ホーム"><img src="/images/logo.webp" alt="PAYCLE" width="800" height="204" /></a>
       <ul class="nav-links">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="rd.html">R&amp;D</a></li>
-        <li><a href="cases.html">Cases</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/rd/">R&amp;D</a></li>
+        <li><a href="/cases/">Cases</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/about/" class="active">About</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="/en/about/" class="lang-switch" hreflang="en" lang="en">English</a>
+        <a href="/contact/" class="btn btn-primary">Contact</a>
         <button class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
       </div>
       <div class="nav-menu" id="nav-menu">
-        <a href="services.html">Services</a><a href="rd.html">R&amp;D</a><a href="cases.html">Cases</a><a href="news.html">News</a><a href="about.html">About</a>
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="/services/">Services</a><a href="/rd/">R&amp;D</a><a href="/cases/">Cases</a><a href="/news/">News</a><a href="/about/">About</a>
+        <a href="/en/about/" class="lang-switch" hreflang="en" lang="en">English</a>
+        <a href="/contact/" class="btn btn-primary">Contact</a>
       </div>
     </nav>
   </div>
+
+  <main id="main" tabindex="-1">
 
   <div class="container">
     <div class="page-head">
@@ -143,15 +158,15 @@
   <section class="section" style="padding-top:32px;">
     <div class="container">
       <div class="split reveal">
-        <div class="split-media"><img src="images/about_philosophy.png" alt="PAYCLEオフィス" /></div>
+        <div class="split-media"><img loading="lazy" decoding="async" src="/images/about_philosophy.webp" alt="PAYCLEオフィス" width="1254" height="1254" /></div>
         <div class="split-body">
           <span class="eyebrow">Philosophy</span>
           <h2 class="h2">企業理念</h2>
           <p>ペイクルは、新しい技術を一部の専門家だけのものにせず、誰もが安心して利用できる製品やサービスとして社会に届けることを目指しています。技術を通じて、人や企業が持つ可能性を広げ、より豊かな社会をつくります。</p>
           <div class="point-list">
-            <div class="point"><span class="pn">01</span><div><h4>Technical Excellence - 技術力</h4><p>長年の最先端技術を活かしたシステムの設計・開発経験を活かし、安全性と使いやすさを備えたシステムを提供します。</p></div></div>
-            <div class="point"><span class="pn">02</span><div><h4>Outstanding Network - ネットワーク</h4><p>大学、研究機関、企業、各分野の専門家と連携し、一社だけでは解決が難しい課題に取り組みます。</p></div></div>
-            <div class="point"><span class="pn">03</span><div><h4>Innovative Mindset - 革新的思考</h4><p>これまでの方法にとらわれず、常に新しい可能性を探索し、より良い方法に挑戦し続ける文化を大切にしています。</p></div></div>
+            <div class="point"><span class="pn">01</span><div><h3>Technical Excellence - 技術力</h3><p>長年の最先端技術を活かしたシステムの設計・開発経験を活かし、安全性と使いやすさを備えたシステムを提供します。</p></div></div>
+            <div class="point"><span class="pn">02</span><div><h3>Outstanding Network - ネットワーク</h3><p>大学、研究機関、企業、各分野の専門家と連携し、一社だけでは解決が難しい課題に取り組みます。</p></div></div>
+            <div class="point"><span class="pn">03</span><div><h3>Innovative Mindset - 革新的思考</h3><p>これまでの方法にとらわれず、常に新しい可能性を探索し、より良い方法に挑戦し続ける文化を大切にしています。</p></div></div>
           </div>
         </div>
       </div>
@@ -162,7 +177,7 @@
   <section class="section" style="background:linear-gradient(180deg,var(--canvas),#eef6fd);">
     <div class="container">
       <div class="split reverse reveal">
-        <div class="split-media split-media--message"><img src="images/about_message.png" alt="村上 昌史" /></div>
+        <div class="split-media split-media--message"><img loading="lazy" decoding="async" src="/images/about_message.webp" alt="村上 昌史" width="1533" height="2300" /></div>
         <div class="split-body">
           <span class="eyebrow">Message</span>
           <h2 class="h2">代表メッセージ</h2>
@@ -196,11 +211,11 @@
         </table>
         <div class="grid" style="gap:20px;">
           <figure>
-            <img src="images/about_fukuoka.webp" alt="福岡本社が入居する天神ビジネスセンター" style="width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-soft);" />
+            <img loading="lazy" decoding="async" src="/images/about_fukuoka.webp" alt="福岡本社が入居する天神ビジネスセンター" style="width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-soft);" width="575" height="275" />
             <figcaption style="font-size:0.85rem;color:var(--muted);margin-top:10px;">福岡本社（天神ビジネスセンター）</figcaption>
           </figure>
           <figure>
-            <img src="images/about_tokyo.webp" alt="東京支社が入居するGINZA SIX" style="width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-soft);" />
+            <img loading="lazy" decoding="async" src="/images/about_tokyo.webp" alt="東京支社が入居するGINZA SIX" style="width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-soft);" width="575" height="275" />
             <figcaption style="font-size:0.85rem;color:var(--muted);margin-top:10px;">東京支社（GINZA SIX）</figcaption>
           </figure>
         </div>
@@ -218,17 +233,17 @@
       </div>
       <div class="grid grid-3 reveal">
         <div class="member">
-          <img class="avatar" src="images/about_ceo_avatar.jpg" alt="村上 昌史" />
+          <img loading="lazy" decoding="async" class="avatar" src="/images/about_ceo_avatar.webp" alt="村上 昌史" width="600" height="600" />
           <div class="role">CEO</div><h3>村上 昌史</h3>
           <p>2010年に自動車ディーラーを創業後、公共インフラ・新電力・飲食など多分野で事業を展開。ブロックチェーンの金融・決済領域に着目し、2018年にペイクルを設立。現在は、長崎総合科学大学の特別教授も務める。</p>
         </div>
         <div class="member">
-          <img class="avatar" src="images/about_cto.jpg" alt="ファビアン・メザリナ" />
+          <img loading="lazy" decoding="async" class="avatar" src="/images/about_cto.webp" alt="ファビアン・メザリナ" width="664" height="750" />
           <div class="role">CTO</div><h3>ファビアン・メザリナ</h3>
           <p>約10年にわたり、Blockchain/<wbr>AI/<wbr>FinTech/<wbr>SaaSで基盤開発。Meetlabs創業者として日本・ラテンアメリカチームを率い、企業DXを支えるプロダクトを推進。価値創出に向けプロジェクトに参画。</p>
         </div>
         <div class="member">
-          <img class="avatar" src="images/about_cfo.png" alt="三嶋 義明" />
+          <img loading="lazy" decoding="async" class="avatar" src="/images/about_cfo.webp" alt="三嶋 義明" width="686" height="639" />
           <div class="role">CFO</div><h3>三嶋 義明</h3>
           <p>UBSで金融商品取引、HVBキャピタル証券で証券化を経験。ザーテックテクノロジーで資金調達やIPO準備を担当。金融知見とネットワークで財務面及びブロックチェーンエコシステムの拡大に寄与する</p>
         </div>
@@ -269,21 +284,23 @@
   <section class="cta-band">
     <h2 class="h1">お問い合わせはこちら</h2>
     <p>技術相談・協業・取材のご依頼など、お気軽にお問い合わせください。</p>
-    <div class="actions"><a href="contact.html" class="btn btn-primary btn-arrow">お問い合わせ</a></div>
+    <div class="actions"><a href="/contact/" class="btn btn-primary btn-arrow">お問い合わせ</a></div>
   </section>
+  </main>
+
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><img src="images/logo.png" alt="PAYCLE" /><p>ブロックチェーン・AI・耐量子暗号の研究開発から、システムの設計・開発まで支援するテクノロジー企業。</p></div>
-        <div class="footer-col"><h4>Company</h4><a href="services.html">Services</a><a href="rd.html">R&amp;D</a><a href="cases.html">Cases</a></div>
-        <div class="footer-col"><h4>Information</h4><a href="news.html">News</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-        <div class="footer-col"><h4>Legal</h4><a href="privacy-policy.html">Privacy Policy</a></div>
+        <div class="footer-brand"><img loading="lazy" decoding="async" src="/images/logo.webp" alt="PAYCLE" width="800" height="204" /><p>ブロックチェーン・AI・耐量子暗号の研究開発から、システムの設計・開発まで支援するテクノロジー企業。</p></div>
+        <div class="footer-col"><p class="footer-h">Company</p><a href="/services/">Services</a><a href="/rd/">R&amp;D</a><a href="/cases/">Cases</a></div>
+        <div class="footer-col"><p class="footer-h">Information</p><a href="/news/">News</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+        <div class="footer-col"><p class="footer-h">Legal</p><a href="/privacy-policy/">Privacy Policy</a></div>
       </div>
-      <div class="footer-bottom"><span>© PAYCLE Inc.</span><a href="privacy-policy.html">プライバシーポリシー</a></div>
+      <div class="footer-bottom"><span>© PAYCLE Inc.</span><a href="/privacy-policy/">プライバシーポリシー</a></div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
