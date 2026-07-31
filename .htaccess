@@ -64,10 +64,10 @@ Options -Indexes
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 
   # Content-Security-Policy
-  # 本サイトの構成（Google Fonts / Google フォーム送信 / インライン
+  # 本サイトの構成（Google Fonts / Google フォーム送信 / GA4 / インライン
   # script・style）に合わせた内容です。適用後に全ページの表示と
-  # お問い合わせフォーム送信の動作確認をお願いします。
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://docs.google.com; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'"
+  # お問い合わせフォーム送信・GA4計測の動作確認をお願いします。
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://analytics.google.com; frame-src https://docs.google.com; form-action 'self' https://docs.google.com; base-uri 'self'; object-src 'none'"
 
   # HSTS — HTTPS 化が完全に確認できた後に有効化してください。
   # 有効化すると指定期間 HTTP へ戻せなくなるため、公開直後は
