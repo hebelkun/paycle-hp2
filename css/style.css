@@ -427,6 +427,18 @@ section[id] { scroll-margin-top: 100px; }
     gap: 4px;
   }
   .nav-menu.open { display: flex; }
+  /* JS無効時: トグルが動かないためメニューをナビ下に常時展開する */
+  html:not(.js) .nav-toggle { display: none; }
+  html:not(.js) .nav { height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+  html:not(.js) .nav-menu {
+    display: flex;
+    position: static;
+    flex-basis: 100%;
+    border: none;
+    box-shadow: none;
+    margin-top: 4px;
+    padding: 8px 0 4px;
+  }
   .nav-menu a {
     font-weight: 600;
     color: var(--indigo);
@@ -1228,3 +1240,12 @@ a.member:hover { transform: translateY(-3px); box-shadow: var(--glow); }
   .hero-dots span { animation: none; opacity: 0.7; }
   .cards-deal .feature-card { transform: none; transition: none; }
 }
+
+/* ============================================================
+   Progressive enhancement — JS無効環境のフォールバック
+   各ページ先頭のインラインスクリプトが <html> に .js を付与する。
+   .js が無い（=JS無効）場合はスクロール演出の初期非表示を解除し、
+   コンテンツを最初から表示する。
+   ============================================================ */
+html:not(.js) .reveal { opacity: 1; transform: none; transition: none; }
+html:not(.js) .cards-deal .feature-card { transform: none; transition: none; }
